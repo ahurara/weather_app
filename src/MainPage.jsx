@@ -124,10 +124,17 @@ const MainPage=()=>{
     return(
         <>
            
-           <div style={mainDiv}>
+           <div style={mainDiv} className="container-fluid" >
+           <div className="row">
+            <div className="col-md-12">
             <div style={overlay}>
                 <h1 style={mainHeading}>Simple Weather App</h1>
-                <p style={p}>based on weatherAPI</p>
+                <span>
+                <p style={p}>{savedText  ?   post && post.current.condition.text  : 'based on weatherAPI'}   {post && (
+                <img src={post.current.condition.icon} />
+                )}</p>
+              
+                </span>
                 <br/>
                 <div style={input}>
                 <input type="text" style={inputfield} placeholder="  Enter the city name" onChange={handleInputChane} value={inputText}/>
@@ -149,6 +156,8 @@ const MainPage=()=>{
                  />
                )}
             </div>
+           </div>
+           </div>
            </div>
         </>
     )
