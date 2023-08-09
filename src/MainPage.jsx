@@ -92,7 +92,7 @@ const MainPage=()=>{
             ()=>{
                 if(savedText !='')
                 {
-                fetch(`http://api.weatherapi.com/v1/current.json?key=${key}&q=${savedText}`)
+                fetch(`https://api.weatherapi.com/v1/current.json?key=${key}&q=${savedText}`)
             .then((response)=>{
                
                 if(!response.ok)
