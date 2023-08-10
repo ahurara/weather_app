@@ -11,3 +11,148 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+.loader-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 30vh;
+  text-align: center;
+}
+
+.loader {
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+  
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+/* mainDiv */
+.mainDiv {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('./asset/elizeu-dias-RN6ts8IZ4_0-unsplash.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+/* overlay */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(77, 173, 221, 0.8);
+}
+
+/* mainHeading */
+.mainHeading {
+  text-align: center;
+  padding-top: 100px;
+  color: white;
+  font-weight: bold;
+  font-size: 60px;
+}
+
+/* p */
+.p {
+  text-align: center;
+  color: white;
+  font-size: 20px;
+}
+
+/* input */
+.input {
+  text-align: center;
+  padding-top: 20px;
+}
+
+/* inputfield */
+.inputfield {
+  border: none;
+  outline: none;
+  width: 500px;
+  height: 60px;
+  border-radius: 10px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+/* button */
+.button {
+  height: 60px;
+  width: 100px;
+  border-radius: 10px;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  border: none;
+  outline: none;
+  color: black;
+  font-weight: bold;
+  background-color: rgba(218, 251, 8, 0.8);
+}
+
+
+/* tableContainer */
+.tableContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  overflow-x: auto;
+}
+
+/* tableStyle */
+.tableStyle {
+  border-collapse: collapse; /* Collapse table borders */
+  border: none; /* Add a border around the table */
+  width: 800px;
+}
+
+/* cellStyle */
+.cellStyle {
+  padding: 0px;
+  border: none;
+}
+
+/* p */
+.p {
+  color: white;
+  font-size: 25px;
+}
+
+/* pd */
+.pd {
+  color: white;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+/* temp */
+.temp {
+  color: white;
+  font-size: 70px;
+  font-weight: bold;
+}
