@@ -51,11 +51,14 @@ code {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height:100vh;
   background-image: url('./asset/elizeu-dias-RN6ts8IZ4_0-unsplash.jpg');
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
+  
 }
+
 
 /* overlay */
 .overlay {
@@ -63,8 +66,10 @@ code {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
-  background-color: rgba(77, 173, 221, 0.8);
+  height: 100vh !important;
+  background-size: cover;
+  overflow: auto;
+  background-color: rgba(24, 25, 26, 0.8);
 }
 
 /* mainHeading */
@@ -121,14 +126,17 @@ code {
   justify-content: center;
   align-items: center;
   margin-top: 50px;
-  overflow-x: auto;
+  max-height:max-content;
 }
+
 
 /* tableStyle */
 .tableStyle {
   border-collapse: collapse; /* Collapse table borders */
   border: none; /* Add a border around the table */
   width: 800px;
+  table-layout: auto;
+  white-space: nowrap;
 }
 
 /* cellStyle */

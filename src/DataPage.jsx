@@ -1,13 +1,18 @@
 import React from "react";
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap/dist/css/bootstrap.css';
 import './index.css';
+import '/node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 const DataPage=(props)=>{
 
     
     return(
         <>
-            <div  className="table-responsive overflow-auto tableContainer">
-            <table  className="table tableStyle">
+        <div className="row justify-content-center g-0" >
+        <div className="col-sm-11" >
+            <div  className="  tableContainer g-0  p-0" >
+            <table  className="table tableStyle" >
               <tbody>
                 <tr>
                   <td  className="bg-transparent cellStyle">
@@ -47,6 +52,8 @@ const DataPage=(props)=>{
                 
                 </tbody>
             </table>
+          </div>
+          </div>
           </div>
         </>
     )

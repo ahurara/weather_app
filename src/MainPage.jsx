@@ -1,6 +1,9 @@
 import React, { useState,useEffect } from "react";
 import DataPage from "./DataPage";
+import 'bootstrap/dist/css/bootstrap.css';
+import '/node_modules/bootstrap/dist/css/bootstrap.min.css';
 import "./index.css"
+
 
 const MainPage=()=>{
     const [inputText, setInputText]=useState('');
@@ -55,11 +58,7 @@ const MainPage=()=>{
             
         },[savedText]);
     
-            useEffect(()=>{
-               
-                console.log(post)
-            },[post])
-    
+           
     
    
 
@@ -67,10 +66,12 @@ const MainPage=()=>{
     return(
         <>
            
-           <div  className="container-fluid mainDiv" >
-           <div className="row">
-            <div className="col-md-12">
-            <div  className="overlay">
+           <div  className="container-fluid no-gutters"  >
+           <div className="row" >
+            <div className="col-sm-12" >
+           <div className="mainDiv " >
+            <div  className="overlay" >
+           
                 <h1 className="mainHeading">Simple Weather App</h1>
                 <span>
                 <p className="p">{savedText  ?   post && post.current.condition.text  : 'based on weatherAPI'}   {post && (
@@ -99,6 +100,7 @@ const MainPage=()=>{
                 :
                 (
                 post &&
+                <>
                 <DataPage
                  country={post.location.country}
                  city={post.location.name}
@@ -106,13 +108,16 @@ const MainPage=()=>{
                  pressure={post.current.pressure_mb}
                  humidity={post.current.humidity}
                  temp={post.current.temp_c}
-                 />)
+                 />
+                </>)
                 
                }
             </div>
            </div>
            </div>
            </div>
+           </div>
+           
         </>
     )
 }
