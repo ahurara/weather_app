@@ -9,6 +9,8 @@ const MainPage=()=>{
     const [inputText, setInputText]=useState('');
     const [savedText, setSavedText]=useState('');
     const [isLoading, setIsLoading]=useState(false);
+    const [isError, setIsError]=useState(false);
+    
       
       const handleInputChane=(e)=>{
         setInputText(e.target.value)
@@ -39,15 +41,21 @@ const MainPage=()=>{
                
                 if(!response.ok)
                 {
-                    console.log("error bad request")
+                    setIsError(true);
+                   
                 }
-               return response.json();
+                else return response.json();
                 
             })
             .then((apiData)=>{
                 //console.log(apiData);
                 setpost(apiData);
+                setIsError(false);
                
+            }).catch((error)=>{
+                console.log(`Api request error: ${error}`);
+                setIsError(true);
+
             }).finally(()=>{
                 setIsLoading(false);
             })
@@ -59,8 +67,12 @@ const MainPage=()=>{
         },[savedText]);
     
            
-    
-   
+        useEffect(() => {
+            if (post) {
+              console.log(post);
+            }
+          }, [post]);
+        
 
 
     return(
@@ -87,12 +99,20 @@ const MainPage=()=>{
                 </div>
                 </div>
                 <br/>
-                {
-                    //if theres the data run the following
-                }
+               
                {
 
-                isLoading ?
+                
+                isError?
+                (
+                    <>
+                    <h1>City not found</h1>
+                    <h1>City not found</h1>
+                    </>
+                )
+                
+
+               : isLoading ?
                 (
                 <div className="loader-container">
                 <div className="loader"></div>
