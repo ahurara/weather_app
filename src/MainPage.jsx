@@ -80,9 +80,11 @@ const MainPage=()=>{
               
                 </span>
                 <br/>
-                <div className="input">
+                <div className="row justify-content-center g-0 p-0 m-0 no-gutters" >
+                <div className="col-sm-5 g-0 m-0 p-0 no-gutters" >
                 <input type="text" className="inputfield" placeholder="  Enter the city name" onChange={handleInputChane} value={inputText}/>
                 <button className="button" onClick={handleSaveChanges}>CHECK</button>
+                </div>
                 </div>
                 <br/>
                 {

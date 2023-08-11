@@ -9,10 +9,10 @@ const DataPage=(props)=>{
     
     return(
         <>
-        <div className="row justify-content-center g-0" >
-        <div className="col-sm-11" >
-            <div  className="  tableContainer g-0  p-0" >
-            <table  className="table tableStyle" >
+        <div className="row justify-content-center g-0 p-0 m-0 no-gutters" >
+        <div className="col-sm-6 g-0 m-0 p-0 no-gutters" >
+            <div  className="  tableContainer g-0  p-0 no-gutters" >
+            <table  className="table tableStyle g-0 p-0 m-0 no-gutters" >
               <tbody>
                 <tr>
                   <td  className="bg-transparent cellStyle">

@@ -75,7 +75,7 @@ code {
 /* mainHeading */
 .mainHeading {
   text-align: center;
-  padding-top: 100px;
+  padding-top: 80px;
   color: white;
   font-weight: bold;
   font-size: 60px;
@@ -98,8 +98,8 @@ code {
 .inputfield {
   border: none;
   outline: none;
-  width: 500px;
-  height: 60px;
+  width: 80%;
+  height: 59px;
   border-radius: 10px;
   border-top-right-radius: 0px;
   border-bottom-right-radius: 0px;
@@ -108,7 +108,7 @@ code {
 /* button */
 .button {
   height: 60px;
-  width: 100px;
+  width: 20%;
   border-radius: 10px;
   border-top-left-radius: 0px;
   border-bottom-left-radius: 0px;
@@ -125,8 +125,9 @@ code {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 50px;
+  margin-top: 20px;
   max-height:max-content;
+  
 }
 
 
@@ -134,8 +135,7 @@ code {
 .tableStyle {
   border-collapse: collapse; /* Collapse table borders */
   border: none; /* Add a border around the table */
-  width: 800px;
-  table-layout: auto;
+  table-layout: fixed;
   white-space: nowrap;
 }
 
@@ -148,19 +148,19 @@ code {
 /* p */
 .p {
   color: white;
-  font-size: 25px;
+  font-size: 2vw;
 }
 
 /* pd */
 .pd {
   color: white;
-  font-size: 25px;
+  font-size: 2vw;
   font-weight: bold;
 }
 
 /* temp */
 .temp {
   color: white;
-  font-size: 70px;
+  font-size: 6vw;
   font-weight: bold;
 }
