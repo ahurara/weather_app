@@ -33,6 +33,7 @@ const MainPage=()=>{
                 if(savedText !== '')
                 {
                 setIsLoading(true);
+                setIsError(false);
                 setTimeout(()=>{
                    
                    
@@ -41,7 +42,9 @@ const MainPage=()=>{
                
                 if(!response.ok)
                 {
+                    console.log('eroor location not found');
                     setIsError(true);
+                   
                    
                 }
                 else return response.json();
@@ -50,13 +53,10 @@ const MainPage=()=>{
             .then((apiData)=>{
                 //console.log(apiData);
                 setpost(apiData);
-                setIsError(false);
+                console.log(apiData);
                
-            }).catch((error)=>{
-                console.log(`Api request error: ${error}`);
-                setIsError(true);
-
-            }).finally(()=>{
+            })
+            .finally(()=>{
                 setIsLoading(false);
             })
            
