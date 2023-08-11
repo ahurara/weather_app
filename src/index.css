@@ -107,7 +107,7 @@ code {
 
 /* button */
 .button {
-  height: 60px;
+  height: 61px;
   width: 20%;
   border-radius: 10px;
   border-top-left-radius: 0px;
@@ -163,4 +163,12 @@ code {
   color: white;
   font-size: 6vw;
   font-weight: bold;
+}
+
+.errorMsg {
+  text-align: center;
+  padding-top: 80px;
+  color: white;
+  /* font-weight: bold; */
+  font-size: 40px;
 }

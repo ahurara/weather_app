@@ -60,7 +60,7 @@ const MainPage=()=>{
                 setIsLoading(false);
             })
            
-                },2000)
+                },1000)
                 
             }
             
@@ -106,8 +106,8 @@ const MainPage=()=>{
                 isError?
                 (
                     <>
-                    <h1>City not found</h1>
-                    <h1>City not found</h1>
+                    <h1 className="errorMsg">No city found</h1>
+                    
                     </>
                 )
                 
